@@ -34,17 +34,17 @@ phone_numbers = [
 ]
 
 try:
-    # Зареждане на страницата
+    # PAge loads
     url = "https://byivan.bg/wonder.html"  # site url
     driver.get(url)
-    time.sleep(3)  # Изчаква страницата да се зареди
+    time.sleep(3)  # wait for the page to load
 
     #  fill and click
     for i in range(2):  # 50 orders
 
         phone_number = phone_numbers[i % len(phone_numbers)]
 
-        # Избери цветова опция, ако е необходимо (замени със селектор на полето)
+        # Pick a color
         color_dropdown = driver.find_element(By.XPATH, "//*[@id='params[412]']")  # Замени с точния XPATH или ID
         color_dropdown.click()
         time.sleep(1)
