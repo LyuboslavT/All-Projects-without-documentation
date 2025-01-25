@@ -10,12 +10,15 @@ calorie_goal = 0  # Daily calorie intake goal
 
 
 def log_workout(workout_type, duration):
-    workout_type.append((workout_type, duration))
 
-    log_workout(workouts, 'run', 30)
-    log_workout(workouts, 'cycling', 30)
-    log_workout(workouts, 'yoga', 30)
-    log_workout(workouts, 'swiming', 30)
+    log_workout('run', 30)
+    log_workout('cycling', 30)
+    log_workout('yoga', 30)
+    log_workout('swimming', 30)
+
+    workouts.append(workout_type)
+
+
 
     """
     Log a workout.
